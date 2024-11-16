@@ -31,10 +31,14 @@ app.use(cookieParser())
 
 
 
-//Using the res.download
+//Using the res.download, or least trying to learn how to use it. 
 app.get("/download", (req, res) => {
     res.download("./images/Food1.png", "Food1.png", (err) => {
-        
+        if(err) {
+            console.log(err)
+        } else {
+            console.log("Download it");
+        }
     })
 });
 let log = function(req, res, next) {
