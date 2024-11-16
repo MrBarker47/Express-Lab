@@ -29,6 +29,14 @@ function renderHello() {
 let cookieParser = require("cookie-parser");
 app.use(cookieParser())
 
+
+
+//Using the res.download
+app.get("/download", (req, res) => {
+    res.download("./images/Food1.png", "Food1.png", (err) => {
+        
+    })
+});
 let log = function(req, res, next) {
     console.log("Charizard is the best")
     next();
