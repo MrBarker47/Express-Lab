@@ -1,4 +1,4 @@
-//This code works in the terminal, but having issues with it on the browser so I have to figure that out. 
+//This code works in the terminal.
 const express = require('express')
 const app = express()
 const port = 3000;
@@ -20,14 +20,14 @@ app.get("/user/:userID/profile", (req, res) => {
 
 //Template Engine from Mustache
 function renderHello() {
-    let template = document.getElementById('template').innerHTML;
+    let template = document.getElementById('template').innerHTML;``
     let rendered = Mustache.render(template, { name: 'Luke' });
     document.getElementById('target').innerHTML = rendered;
   }
 
   //Middleware
-
-
+let cookieParser = require("cookie-parser");
+app.use(cookieParser())
 
 let log = function(req, res, next) {
     console.log("Charizard is the best")
