@@ -8,14 +8,15 @@ app.get("/", (req, res) => {
     res.send("Hello, Jamaal how are you today?");
 })
 
-app.post("/express", (req, res) => {
+app.post("/", (req, res) => {
     res.send("Hello User");
 })
 
 
-app.get("/user/:userID/profile", (req, res) => {
-    res.send(`Go through the users profile page for: ${req.params.userID}`);
+app.put("/user", (req, res) => {
+  res.status(201).send("You got mail!");
 })
+
 
 
 //Template Engine from Mustache
