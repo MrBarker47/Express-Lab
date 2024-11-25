@@ -18,6 +18,9 @@ app.put("/user", (req, res) => {
 })
 
 
+app.delete('/', (req, res) => {
+  res.send('Delete response');
+})
 
 //Template Engine from Mustache
 function renderHello() {
